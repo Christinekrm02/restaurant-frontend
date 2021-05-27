@@ -1,0 +1,140 @@
+/* styles optimal for mobile layout */
+*{
+    margin: 0;
+}
+
+html,body{
+    height: 100%;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    /* add background color here
+    so that footer can simply inherit color
+    which is different color from body */
+    background-color: #48515B;
+}
+p{
+    margin: .5 em 0 .5em 0;
+}
+header{
+    display: block;
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    background-color: #87cefa;
+    padding: 10px;
+}
+
+nav a:visited, 
+nav a:link{
+    color: #fff;
+    text-decoration: none;
+}
+
+nav > ul {
+    display: inline;
+    padding: 0;
+}
+
+nav > ul > li{
+    display: inline-block;
+    list-style: none;
+    margin: 0 5px 0 5px;
+
+}
+
+main{
+    display: block;
+    background: repeating-linear-gradient(
+  to right,
+  #D7E1EE,
+  #D7E1EE 10px,
+  #B0DAFF 10px,
+  #B0DAFF 20px
+);
+/* padding pushes main content down so that it is not under header */
+padding-top: 3em;
+padding-bottom: 3em;
+/* ensures that bottom navigation shows up at the bottom of the page */
+min-height: 85%;
+}
+
+footer{
+    padding: 15px;
+}
+
+aside, article{
+    /* use em so that layout can adjust depending on size */
+    padding: 2em;
+}
+
+aside{
+   text-align: center;
+} 
+
+aside > img {
+    max-width:100%;
+    height:auto;
+    width: 445px;
+}
+
+article > #search-report{
+    /* adds transparent border */
+    border: 10px solid hsla(0,0%,100%,.5);
+    background: #fff;
+    background-clip: padding-box;
+}
+
+article{
+    width: 75%;
+}
+/* contact page styles */
+.restaurant{
+   /* margin: 1rem;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    margin: auto;
+    padding: .5rem;  */
+    width: 200px;
+    padding: 10px;
+    margin: 10px;
+    background-color: #fff;
+    border: solid 1px #ccc;
+    line-height: 1.2em;
+}
+.restaurant img{
+    max-width: 100%;
+} 
+.restaurant .title{
+    font-weight: bold;
+}
+
+.restaurant button{
+    background-color: rgb(24, 112, 189);
+    padding: 10px;
+    border: solid 1px pink;
+    border-radius: 3px;
+    color: #fff;
+
+}
+
+
+/* optimal for desktop */
+
+@media only screen and (min-width: 768px){
+    main{
+        display: flex;
+    }
+    aside{
+        margin-left: 2%;
+    }
+
+    .columns-desktop{
+        display: flex;
+    }
+
+}
+
